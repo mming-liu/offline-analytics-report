@@ -194,4 +194,14 @@ offline-analytics-report/
 
 ---
 
+## 九、同系列仓库（可串成一条链路）
+
+| 仓库 | 作用 |
+| --- | --- |
+| [py-automation-kit](https://github.com/mming-liu/py-automation-kit) | 文件与接口层：批量整理、多表合并、接口同步，产出规范 CSV |
+| [data-clean-pipeline](https://github.com/mming-liu/data-clean-pipeline) | 数据层：脏表 → 标准数据集，逐格留痕可追溯 |
+| **offline-analytics-report**（本仓库） | 报表层：标准数据集 → 经营复盘报表与结论 |
+
+---
+
 维护：需求分析师 + 测试与开发工程师 轻量化协作 · 口径前置对齐，结论可回溯
