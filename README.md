@@ -10,6 +10,8 @@
 
 ![复盘报表](docs/preview.png)
 
+👉 **[在线打开真 HTML 报表](https://mming-liu.github.io/offline-analytics-report/)** — 图表可 hover 看数值、可直接打印 PDF，与截图同源，由项目自身生成
+
 ---
 
 ## 零、操作步骤（照着敲，约 3 分钟）

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>经营数据复盘报告 · 2025-01 至 2026-09</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f4f6fa;color:#1f2937;font:14px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:26px 20px 64px}
+.num{font-variant-numeric:tabular-nums}
+.hero{position:relative;background:linear-gradient(120deg,#123a63 0%,#1d5f9c 62%,#2a6fae 100%);color:#fff;border-radius:16px;padding:34px 34px 28px;box-shadow:0 12px 32px rgba(18,58,99,.2);overflow:hidden}
+.hero:after{content:"";position:absolute;right:-70px;top:-80px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.06)}
+.hero .tag{display:inline-block;font-size:11.5px;letter-spacing:.2em;background:rgba(255,255,255,.16);padding:5px 11px;border-radius:4px}
+.hero h1{margin:16px 0 8px;font-size:27px;font-weight:700;letter-spacing:.6px}
+.hero .meta{margin:0;color:#c7dcf1;font-size:12.5px;line-height:1.9}
+.hero .stamp{position:absolute;right:34px;bottom:26px;text-align:right;font-size:11.5px;color:#a9c6e2;line-height:1.8}
+section{background:#fff;border:1px solid #e4eaf2;border-radius:14px;padding:24px 26px;margin-top:18px;box-shadow:0 2px 8px rgba(24,42,66,.045)}
+section.tight{padding-bottom:14px}
+h2{font-size:16px;margin:0 0 3px;color:#123a63;display:flex;align-items:center;gap:9px}
+h2 .idx{width:24px;height:24px;line-height:24px;text-align:center;background:#123a63;color:#fff;border-radius:6px;font-size:12px;font-weight:600}
+h2 small{font-weight:400;color:#8a9aae;font-size:12px;margin-left:auto;letter-spacing:.02em}
+.sub{color:#7b8a9c;font-size:12.5px;margin:6px 0 18px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:840px){.grid2{grid-template-columns:1fr}}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:14px;margin-top:18px}
+.kpi{background:#fff;border:1px solid #e4eaf2;border-radius:13px;padding:16px 18px 13px;box-shadow:0 2px 8px rgba(24,42,66,.045);position:relative;overflow:hidden}
+.kpi:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#1d5f9c;opacity:.85}
+.kpi .lbl{font-size:12px;color:#7b8a9c;letter-spacing:.02em}
+.kpi .val{font-size:25px;font-weight:700;color:#123a63;line-height:1.3;margin-top:3px;letter-spacing:-.5px}
+.kpi .val small{font-size:12.5px;font-weight:500;color:#7b8a9c;margin-left:2px}
+.kpi .foot{display:flex;align-items:center;justify-content:space-between;margin-top:7px;gap:8px}
+.badge{font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:20px;white-space:nowrap}
+.badge.flat{color:#7b8a9c;background:#f1f5fa}
+.insights{display:grid;gap:11px}
+.insight{display:grid;grid-template-columns:4px 1fr;gap:14px;background:#fafcff;border:1px solid #e9eff7;border-radius:10px;padding:13px 16px 13px 0;overflow:hidden}
+.insight .bar{background:#1d4e89;border-radius:0 3px 3px 0}
+.insight.warn .bar{background:#c2410c}
+.insight.good .bar{background:#0f8a4d}
+.insight .t{font-size:13.5px;font-weight:600;color:#123a63;margin:0 0 3px}
+.insight .d{font-size:12.5px;color:#5b6b7f;margin:0}
+.insight.warn .t{color:#9a3412}
+.insight.good .t{color:#0f6b3d}
+table{width:100%;border-collapse:collapse;font-size:12.8px}
+th{background:#f4f7fb;color:#4b5c71;font-weight:600;text-align:right;padding:9px 10px;border-bottom:2px solid #e1e9f2;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+td{padding:8px 10px;border-bottom:1px solid #eff3f8;text-align:right}
+tr:last-child td{border-bottom:none}
+tbody tr:hover{background:#fafcff}
+.up{color:#d64545;font-weight:600}
+.down{color:#2e9e6b;font-weight:600}
+.muted{color:#93a3b5}
+.tag{display:inline-block;font-size:10.5px;padding:0 6px;border-radius:4px;background:#eef2f7;color:#5b6b7f;font-weight:600}
+.tag.a{background:#e8f0fb;color:#123a63}
+.tag.b{background:#eef7f0;color:#0f6b3d}
+.tag.c{background:#f4f1fa;color:#5b4b8a}
+.prog{margin:0}
+.prog .row{display:grid;grid-template-columns:72px 1fr 96px;gap:14px;align-items:center;padding:6px 0;font-size:12.5px}
+.prog .track{height:10px;background:#f1f5fa;border-radius:6px;overflow:hidden;position:relative}
+.prog .fill{height:100%;border-radius:6px}
+.prog .mono{font-variant-numeric:tabular-nums;text-align:right;color:#41536b}
+.notes{font-size:12.5px;color:#5b6b7f;line-height:2}
+.notes b{color:#123a63}
+.notes ol{margin:6px 0 0;padding-left:20px}
+.notes li{margin-bottom:5px}
+footer{margin-top:22px;color:#8a9aae;font-size:11.5px;text-align:center;line-height:1.9}
+.chartbox{margin-top:4px}
+.legend-inline{font-size:11.5px;color:#8a9aae;margin-top:6px}
+@media print{
+  body{background:#fff}
+  .wrap{max-width:none;padding:0}
+  section,.hero,.kpi{box-shadow:none;break-inside:avoid}
+  section{margin-top:12px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="tag">离线数据分析 · 经营复盘</div>
+    <h1>订单经营数据复盘报告</h1>
+    <p class="meta">
+      分析区间：2025-01 ~ 2026-09（21 个月 / 3,975 条明细）<br>
+      数据来源：sales_orders.csv ｜ 同比基准：2025 年同期 ｜ 口径：GMV 仅计已支付订单
+    </p>
+    <div class="stamp">本地离线生成<br>2026-10-20 21:21:38</div>
+  </div>
+
+  <div class="kpis"><div class="kpi"><div class="lbl">累计 GMV</div><div class="val num">¥79.1<small>万</small></div><div class="foot"><span class="badge" style="color:#d64545;background:#d6454514">▲ 同比 28.2%</span><svg viewBox="0 0 120 34" width="120" height="34" style="display:block;font-family:system-ui,-apple-system,'Segoe UI','Microsoft YaHei',sans-serif"><polyline points="4.0,25.2 20.0,30.0 36.0,13.4 52.0,11.0 68.0,7.6 84.0,4.4 100.0,4.0 116.0,7.1" fill="none" stroke="#1d4e89" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg></div></div><div class="kpi"><div class="lbl">累计订单数</div><div class="val num">1,471<small>单</small></div><div class="foot"><span class="badge" style="color:#d64545;background:#d6454514">▲ 同比 19.6%</span><svg viewBox="0 0 120 34" width="120" height="34" style="display:block;font-family:system-ui,-apple-system,'Segoe UI','Microsoft YaHei',sans-serif"><polyline points="4.0,25.2 20.0,30.0 36.0,13.4 52.0,11.0 68.0,7.6 84.0,4.4 100.0,4.0 116.0,7.1" fill="none" stroke="#1d4e89" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg></div></div><div class="kpi"><div class="lbl">客单价</div><div class="val num">¥538</div><div class="foot"><span class="badge" style="color:#d64545;background:#d6454514">▲ 同比 7.2%</span></div></div><div class="kpi"><div class="lbl">销量</div><div class="val num">4,195<small>件</small></div><div class="foot"><span class="badge" style="color:#d64545;background:#d6454514">▲ 同比 19.4%</span></div></div><div class="kpi"><div class="lbl">2026-09 单月 GMV</div><div class="val num">¥9.8<small>万</small></div><div class="foot"><span class="badge" style="color:#2e9e6b;background:#2e9e6b14">▼ 环比 5.4%</span></div></div><div class="kpi"><div class="lbl">订单支付率</div><div class="val num">82.1<small>%</small></div><div class="foot"><span class="badge flat">已支付 / 全部下单</span></div></div></div>
+
+  <section>
+    <h2><span class="idx">1</span>执行摘要 <small>结论由数据自动生成，可逐条回溯到下方图表</small></h2>
+    <div class="insights"><div class="insight info"><div class="bar"></div><div><p class="t">整体规模同比增长 28.2%</p><p class="d">2026 年累计 GMV ¥791,229，去年同期 ¥617,280；客单价同比 +7.2%，订单量同比 +19.6%。</p></div></div><div class="insight good"><div class="bar"></div><div><p class="t">数码配件 是同比增幅最大的品类（+39.0%）</p><p class="d">贡献 GMV ¥486,804，占比 61.5%。同期 清洁用品 同比 -18.6%，是需要单独复盘的对象。</p></div></div><div class="insight warn"><div class="bar"></div><div><p class="t">清洁用品 同比下滑 18.6%</p><p class="d">GMV 由去年同期 ¥56,044 降至 ¥45,595，占比 5.8%。建议核查单价、动销 SKU 数与渠道铺货情况。</p></div></div><div class="insight warn"><div class="bar"></div><div><p class="t">2026-03 目标达成率最低（77%）</p><p class="d">当月 GMV ¥56,556，目标 ¥73,062，缺口 ¥16,506；7/9 个月已达标，缺口集中在 2 个月。</p></div></div><div class="insight info"><div class="bar"></div><div><p class="t">华东 是最大市场，占比 32.8%</p><p class="d">前两大区域合计占 55.7%，区域集中度偏高，建议评估长尾市场的投入产出。</p></div></div><div class="insight good"><div class="bar"></div><div><p class="t">小程序 客单价最高（¥661）</p><p class="d">是 线下门店（¥503）的 1.3 倍。但 小程序 仅占 GMV 13.6%，存在提升空间。</p></div></div><div class="insight info"><div class="bar"></div><div><p class="t">下单到支付的转化率 82.1%</p><p class="d">2026 年共 320 笔订单未完成支付，其中取消 130 笔。若转化率提升 5 个百分点，按当前客单价可多出约 ¥48,168 GMV。</p></div></div></div>
+  </section>
+
+  <section>
+    <h2><span class="idx">2</span>月度 GMV 趋势 <small>2026 年 vs 2025 年 · 按月对齐</small></h2>
+    <p class="sub">实线为当年，虚线为去年同期，两者同一月份刻度对比。2026 年 10-12 月无数据属正常（分析区间截止 2026-09）。</p>
+    <div class="chartbox"><svg viewBox="0 0 800 310" width="100%" role="img" aria-label="趋势折线图" style="display:block;font-family:system-ui,-apple-system,'Segoe UI','Microsoft YaHei',sans-serif"><rect x="68" y="7" width="10" height="10" rx="2.5" fill="#1d4e89"/><text x="83" y="16" font-size="11.5" fill="#334155">2026 年</text><rect x="158" y="7" width="10" height="10" rx="2.5" fill="#9fb6cd"/><text x="173" y="16" font-size="11.5" fill="#334155">2025 年</text><line x1="68" y1="34.0" x2="770" y2="34.0" stroke="#e8eef6" stroke-width="1"/><text x="58" y="38.0" text-anchor="end" font-size="11" fill="#94a3b8">12.0万</text><line x1="68" y1="93.0" x2="770" y2="93.0" stroke="#e8eef6" stroke-width="1"/><text x="58" y="97.0" text-anchor="end" font-size="11" fill="#94a3b8">9.0万</text><line x1="68" y1="152.0" x2="770" y2="152.0" stroke="#e8eef6" stroke-width="1"/><text x="58" y="156.0" text-anchor="end" font-size="11" fill="#94a3b8">6.0万</text><line x1="68" y1="211.0" x2="770" y2="211.0" stroke="#e8eef6" stroke-width="1"/><text x="58" y="215.0" text-anchor="end" font-size="11" fill="#94a3b8">3.0万</text><line x1="68" y1="270.0" x2="770" y2="270.0" stroke="#e8eef6" stroke-width="1"/><text x="58" y="274.0" text-anchor="end" font-size="11" fill="#94a3b8">0</text><text x="68.0" y="290" text-anchor="middle" font-size="11" fill="#94a3b8">1 月</text><text x="131.8" y="290" text-anchor="middle" font-size="11" fill="#94a3b8">2 月</text><text x="195.6" y="290" text-anchor="middle" font-size="11" fill="#94a3b8">3 月</text><text x="259.5" y="290" text-anchor="middle" font-size="11" fill="#94a3b8">4 月</text><text x="323.3" y="290" text-anchor="middle" font-size="11" fill="#94a3b8">5 月</text><text x="387.1" y="290" text-anchor="middle" font-size="11" fill="#94a3b8">6 月</text><text x="450.9" y="290" text-anchor="middle" font-size="11" fill="#94a3b8">7 月</text><text x="514.7" y="290" text-anchor="middle" font-size="11" fill="#94a3b8">8 月</text><text x="578.5" y="290" text-anchor="middle" font-size="11" fill="#94a3b8">9 月</text><text x="642.4" y="290" text-anchor="middle" font-size="11" fill="#94a3b8">10 月</text><text x="706.2" y="290" text-anchor="middle" font-size="11" fill="#94a3b8">11 月</text><text x="770.0" y="290" text-anchor="middle" font-size="11" fill="#94a3b8">12 月</text><polyline points="68.0,86.6 131.8,141.9 195.6,158.8 259.5,100.5 323.3,91.9 387.1,80.0 450.9,68.7 514.7,67.4 578.5,78.2" fill="none" stroke="#1d4e89" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="68.0" cy="86.6" r="3.2" fill="#fff" stroke="#1d4e89" stroke-width="2"><title>1 月 2026 年 ¥9.3万</title></circle><circle cx="131.8" cy="141.9" r="3.2" fill="#fff" stroke="#1d4e89" stroke-width="2"><title>2 月 2026 年 ¥6.5万</title></circle><circle cx="195.6" cy="158.8" r="3.2" fill="#fff" stroke="#1d4e89" stroke-width="2"><title>3 月 2026 年 ¥5.7万</title></circle><circle cx="259.5" cy="100.5" r="3.2" fill="#fff" stroke="#1d4e89" stroke-width="2"><title>4 月 2026 年 ¥8.6万</title></circle><circle cx="323.3" cy="91.9" r="3.2" fill="#fff" stroke="#1d4e89" stroke-width="2"><title>5 月 2026 年 ¥9.1万</title></circle><circle cx="387.1" cy="80.0" r="3.2" fill="#fff" stroke="#1d4e89" stroke-width="2"><title>6 月 2026 年 ¥9.7万</title></circle><circle cx="450.9" cy="68.7" r="3.2" fill="#fff" stroke="#1d4e89" stroke-width="2"><title>7 月 2026 年 ¥10.2万</title></circle><circle cx="514.7" cy="67.4" r="3.2" fill="#fff" stroke="#1d4e89" stroke-width="2"><title>8 月 2026 年 ¥10.3万</title></circle><circle cx="578.5" cy="78.2" r="3.2" fill="#fff" stroke="#1d4e89" stroke-width="2"><title>9 月 2026 年 ¥9.8万</title></circle><text x="572.5" y="68.2" text-anchor="end" font-size="11.5" font-weight="600" fill="#1d4e89">¥9.8万</text><polyline points="68.0,127.9 131.8,175.9 195.6,145.1 259.5,132.9 323.3,128.0 387.1,100.6 450.9,131.3 514.7,139.0 578.5,135.4 642.4,92.9 706.2,95.3 770.0,95.2" fill="none" stroke="#9fb6cd" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 4"/><circle cx="68.0" cy="127.9" r="3.2" fill="#fff" stroke="#9fb6cd" stroke-width="2"><title>1 月 2025 年 ¥7.2万</title></circle><circle cx="131.8" cy="175.9" r="3.2" fill="#fff" stroke="#9fb6cd" stroke-width="2"><title>2 月 2025 年 ¥4.8万</title></circle><circle cx="195.6" cy="145.1" r="3.2" fill="#fff" stroke="#9fb6cd" stroke-width="2"><title>3 月 2025 年 ¥6.4万</title></circle><circle cx="259.5" cy="132.9" r="3.2" fill="#fff" stroke="#9fb6cd" stroke-width="2"><title>4 月 2025 年 ¥7.0万</title></circle><circle cx="323.3" cy="128.0" r="3.2" fill="#fff" stroke="#9fb6cd" stroke-width="2"><title>5 月 2025 年 ¥7.2万</title></circle><circle cx="387.1" cy="100.6" r="3.2" fill="#fff" stroke="#9fb6cd" stroke-width="2"><title>6 月 2025 年 ¥8.6万</title></circle><circle cx="450.9" cy="131.3" r="3.2" fill="#fff" stroke="#9fb6cd" stroke-width="2"><title>7 月 2025 年 ¥7.1万</title></circle><circle cx="514.7" cy="139.0" r="3.2" fill="#fff" stroke="#9fb6cd" stroke-width="2"><title>8 月 2025 年 ¥6.7万</title></circle><circle cx="578.5" cy="135.4" r="3.2" fill="#fff" stroke="#9fb6cd" stroke-width="2"><title>9 月 2025 年 ¥6.8万</title></circle><circle cx="642.4" cy="92.9" r="3.2" fill="#fff" stroke="#9fb6cd" stroke-width="2"><title>10 月 2025 年 ¥9.0万</title></circle><circle cx="706.2" cy="95.3" r="3.2" fill="#fff" stroke="#9fb6cd" stroke-width="2"><title>11 月 2025 年 ¥8.9万</title></circle><circle cx="770.0" cy="95.2" r="3.2" fill="#fff" stroke="#9fb6cd" stroke-width="2"><title>12 月 2025 年 ¥8.9万</title></circle></svg></div>
+  </section>
+
+  <div class="grid2">
+    <section>
+      <h2><span class="idx">3</span>品类结构</h2>
+      <p class="sub">各品类 GMV 占比，用于判断收入是否过度依赖单一品类。</p>
+      <svg viewBox="0 0 460 250" width="100%" role="img" aria-label="品类占比环形图" style="display:block;font-family:system-ui,-apple-system,'Segoe UI','Microsoft YaHei',sans-serif"><circle cx="125.0" cy="125.0" r="103.0" fill="none" stroke="#f1f5fa" stroke-width="32"/><circle cx="125.0" cy="125.0" r="103.0" fill="none" stroke="#1d4e89" stroke-width="32" stroke-dasharray="398.17 249.00" stroke-dashoffset="-0.00" transform="rotate(-90 125.0 125.0)" stroke-linecap="butt"><title>数码配件 486,804（61.5%）</title></circle><circle cx="125.0" cy="125.0" r="103.0" fill="none" stroke="#3d8bfd" stroke-width="32" stroke-dasharray="183.25 463.92" stroke-dashoffset="-398.17" transform="rotate(-90 125.0 125.0)" stroke-linecap="butt"><title>办公耗材 224,041（28.3%）</title></circle><circle cx="125.0" cy="125.0" r="103.0" fill="none" stroke="#5fa8d3" stroke-width="32" stroke-dasharray="37.29 609.87" stroke-dashoffset="-581.42" transform="rotate(-90 125.0 125.0)" stroke-linecap="butt"><title>清洁用品 45,595（5.8%）</title></circle><circle cx="125.0" cy="125.0" r="103.0" fill="none" stroke="#7bc0a3" stroke-width="32" stroke-dasharray="28.46 618.71" stroke-dashoffset="-618.71" transform="rotate(-90 125.0 125.0)" stroke-linecap="butt"><title>包装材料 34,790（4.4%）</title></circle><text x="125.0" y="123.0" text-anchor="middle" font-size="18" font-weight="700" fill="#1d4e89">¥79.1万</text><text x="125.0" y="145.0" text-anchor="middle" font-size="11.5" fill="#94a3b8">GMV 合计</text><rect x="256" y="25" width="10" height="10" rx="2.5" fill="#1d4e89"/><text x="272" y="34" font-size="12.5" fill="#334155">数码配件</text><text x="454" y="34" text-anchor="end" font-size="12" fill="#41536b" font-weight="600">61.5%</text><rect x="256" y="55" width="10" height="10" rx="2.5" fill="#3d8bfd"/><text x="272" y="64" font-size="12.5" fill="#334155">办公耗材</text><text x="454" y="64" text-anchor="end" font-size="12" fill="#41536b" font-weight="600">28.3%</text><rect x="256" y="85" width="10" height="10" rx="2.5" fill="#5fa8d3"/><text x="272" y="94" font-size="12.5" fill="#334155">清洁用品</text><text x="454" y="94" text-anchor="end" font-size="12" fill="#41536b" font-weight="600">5.8%</text><rect x="256" y="115" width="10" height="10" rx="2.5" fill="#7bc0a3"/><text x="272" y="124" font-size="12.5" fill="#334155">包装材料</text><text x="454" y="124" text-anchor="end" font-size="12" fill="#41536b" font-weight="600">4.4%</text></svg>
+    </section>
+    <section>
+      <h2><span class="idx">4</span>品类明细与同比</h2>
+      <p class="sub">ABC 按帕累托跨线规则分级：把自己累计进 70% 之内的为 A 类核心，90% 之内为 B 类，其余为 C 类。</p>
+      <table>
+        <thead><tr><th>品类</th><th>GMV</th><th>占比</th><th>订单</th><th>客单价</th><th>同比</th></tr></thead>
+        <tbody><tr><td>数码配件 <span class="tag a">A</span></td><td class="num">486,804</td><td class="num">61.5%</td><td class="num">530</td><td class="num">¥918</td><td><span class="up">▲ 39.0%</span></td></tr><tr><td>办公耗材 <span class="tag a">A</span></td><td class="num">224,041</td><td class="num">28.3%</td><td class="num">477</td><td class="num">¥470</td><td><span class="up">▲ 21.4%</span></td></tr><tr><td>清洁用品 <span class="tag b">B</span></td><td class="num">45,595</td><td class="num">5.8%</td><td class="num">229</td><td class="num">¥199</td><td><span class="down">▼ 18.6%</span></td></tr><tr><td>包装材料 <span class="tag c">C</span></td><td class="num">34,790</td><td class="num">4.4%</td><td class="num">235</td><td class="num">¥148</td><td><span class="up">▲ 31.1%</span></td></tr></tbody>
+      </table>
+    </section>
+  </div>
+
+  <section>
+    <h2><span class="idx">5</span>品类贡献度（帕累托） <small>累计 80% 分界线</small></h2>
+    <p class="sub">柱为各品类 GMV，折线为累计占比。落在 80% 线之前的品类即核心盘，资源应优先保障。</p>
+    <div class="chartbox"><svg viewBox="0 0 800 330" width="100%" role="img" aria-label="品类帕累托图" style="display:block;font-family:system-ui,-apple-system,'Segoe UI','Microsoft YaHei',sans-serif"><line x1="68" y1="26.0" x2="744" y2="26.0" stroke="#e8eef6"/><text x="58" y="30.0" text-anchor="end" font-size="11" fill="#94a3b8">50.0万</text><text x="754" y="30.0" font-size="11" fill="#94a3b8">100%</text><line x1="68" y1="89.0" x2="744" y2="89.0" stroke="#e8eef6"/><text x="58" y="93.0" text-anchor="end" font-size="11" fill="#94a3b8">37.5万</text><text x="754" y="93.0" font-size="11" fill="#94a3b8">75%</text><line x1="68" y1="152.0" x2="744" y2="152.0" stroke="#e8eef6"/><text x="58" y="156.0" text-anchor="end" font-size="11" fill="#94a3b8">25.0万</text><text x="754" y="156.0" font-size="11" fill="#94a3b8">50%</text><line x1="68" y1="215.0" x2="744" y2="215.0" stroke="#e8eef6"/><text x="58" y="219.0" text-anchor="end" font-size="11" fill="#94a3b8">12.5万</text><text x="754" y="219.0" font-size="11" fill="#94a3b8">25%</text><line x1="68" y1="278.0" x2="744" y2="278.0" stroke="#e8eef6"/><text x="58" y="282.0" text-anchor="end" font-size="11" fill="#94a3b8">0</text><text x="754" y="282.0" font-size="11" fill="#94a3b8">0%</text><line x1="68" y1="76.4" x2="744" y2="76.4" stroke="#d64545" stroke-width="1.2" stroke-dasharray="6 4" opacity="0.75"/><text x="740" y="70.4" text-anchor="end" font-size="10.5" fill="#d64545">80% 分界线</text><rect x="121.5" y="32.7" width="62.0" height="245.3" rx="4" fill="#1d4e89" opacity="0.95"><title>数码配件 48.7万</title></rect><text x="152.5" y="296" text-anchor="middle" font-size="11.5" fill="#334155">数码配件</text><text x="152.5" y="312" text-anchor="middle" font-size="10" fill="#94a3b8">A 类</text><rect x="290.5" y="165.1" width="62.0" height="112.9" rx="4" fill="#1d4e89" opacity="0.87"><title>办公耗材 22.4万</title></rect><text x="321.5" y="296" text-anchor="middle" font-size="11.5" fill="#334155">办公耗材</text><text x="321.5" y="312" text-anchor="middle" font-size="10" fill="#94a3b8">A 类</text><rect x="459.5" y="255.0" width="62.0" height="23.0" rx="4" fill="#1d4e89" opacity="0.79"><title>清洁用品 4.6万</title></rect><text x="490.5" y="296" text-anchor="middle" font-size="11.5" fill="#334155">清洁用品</text><text x="490.5" y="312" text-anchor="middle" font-size="10" fill="#94a3b8">B 类</text><rect x="628.5" y="260.5" width="62.0" height="17.5" rx="4" fill="#1d4e89" opacity="0.71"><title>包装材料 3.5万</title></rect><text x="659.5" y="296" text-anchor="middle" font-size="11.5" fill="#334155">包装材料</text><text x="659.5" y="312" text-anchor="middle" font-size="10" fill="#94a3b8">C 类</text><polyline points="152.5,123.0 321.5,51.6 490.5,37.1 659.5,26.0" fill="none" stroke="#d64545" stroke-width="2.2" stroke-linejoin="round"/><circle cx="152.5" cy="123.0" r="3.4" fill="#fff" stroke="#d64545" stroke-width="2"/><text x="152.5" y="114.0" text-anchor="middle" font-size="10.5" fill="#d64545">62%</text><circle cx="321.5" cy="51.6" r="3.4" fill="#fff" stroke="#d64545" stroke-width="2"/><text x="321.5" y="42.6" text-anchor="middle" font-size="10.5" fill="#d64545">90%</text><circle cx="490.5" cy="37.1" r="3.4" fill="#fff" stroke="#d64545" stroke-width="2"/><text x="490.5" y="28.1" text-anchor="middle" font-size="10.5" fill="#d64545">96%</text><circle cx="659.5" cy="26.0" r="3.4" fill="#fff" stroke="#d64545" stroke-width="2"/><text x="659.5" y="17.0" text-anchor="middle" font-size="10.5" fill="#d64545">100%</text><rect x="68" y="7" width="10" height="10" rx="2.5" fill="#1d4e89"/><text x="83" y="16" font-size="11.5" fill="#334155">GMV 贡献</text><rect x="158" y="7" width="10" height="10" rx="2.5" fill="#d64545"/><text x="173" y="16" font-size="11.5" fill="#334155">累计占比</text></svg></div>
+  </section>
+
+  <div class="grid2">
+    <section>
+      <h2><span class="idx">6</span>区域表现</h2>
+      <p class="sub">按 GMV 排序，右侧为占比。</p>
+      <svg viewBox="0 0 800 236" width="100%" role="img" aria-label="横向条形图" style="display:block;font-family:system-ui,-apple-system,'Segoe UI','Microsoft YaHei',sans-serif"><text x="80" y="27.0" text-anchor="end" font-size="12.5" fill="#334155">华东</text><rect x="92" y="8" width="556" height="30" rx="4" fill="#f1f5fa"/><rect x="92" y="8" width="556.0" height="30" rx="4" fill="#1d4e89"><title>华东 ¥25.9万</title></rect><text x="660" y="27.0" font-size="12" fill="#41536b" font-weight="600">¥25.9万　32.8%</text><text x="80" y="71.0" text-anchor="end" font-size="12.5" fill="#334155">华南</text><rect x="92" y="52" width="556" height="30" rx="4" fill="#f1f5fa"/><rect x="92" y="52" width="390.3" height="30" rx="4" fill="#1d4e89"><title>华南 ¥18.2万</title></rect><text x="660" y="71.0" font-size="12" fill="#41536b" font-weight="600">¥18.2万　23.0%</text><text x="80" y="115.0" text-anchor="end" font-size="12.5" fill="#334155">华北</text><rect x="92" y="96" width="556" height="30" rx="4" fill="#f1f5fa"/><rect x="92" y="96" width="377.0" height="30" rx="4" fill="#1d4e89"><title>华北 ¥17.6万</title></rect><text x="660" y="115.0" font-size="12" fill="#41536b" font-weight="600">¥17.6万　22.2%</text><text x="80" y="159.0" text-anchor="end" font-size="12.5" fill="#334155">西南</text><rect x="92" y="140" width="556" height="30" rx="4" fill="#f1f5fa"/><rect x="92" y="140" width="205.3" height="30" rx="4" fill="#1d4e89"><title>西南 ¥9.6万</title></rect><text x="660" y="159.0" font-size="12" fill="#41536b" font-weight="600">¥9.6万　12.1%</text><text x="80" y="203.0" text-anchor="end" font-size="12.5" fill="#334155">华中</text><rect x="92" y="184" width="556" height="30" rx="4" fill="#f1f5fa"/><rect x="92" y="184" width="168.9" height="30" rx="4" fill="#1d4e89"><title>华中 ¥7.9万</title></rect><text x="660" y="203.0" font-size="12" fill="#41536b" font-weight="600">¥7.9万　10.0%</text></svg>
+    </section>
+    <section>
+      <h2><span class="idx">7</span>渠道表现</h2>
+      <p class="sub">按 GMV 排序；客单价差异见下表，是渠道策略的关键输入。</p>
+      <svg viewBox="0 0 800 236" width="100%" role="img" aria-label="横向条形图" style="display:block;font-family:system-ui,-apple-system,'Segoe UI','Microsoft YaHei',sans-serif"><text x="80" y="27.0" text-anchor="end" font-size="12.5" fill="#334155">线下门店</text><rect x="92" y="8" width="556" height="30" rx="4" fill="#f1f5fa"/><rect x="92" y="8" width="556.0" height="30" rx="4" fill="#3d8bfd"><title>线下门店 ¥23.1万</title></rect><text x="660" y="27.0" font-size="12" fill="#41536b" font-weight="600">¥23.1万　29.2%</text><text x="80" y="71.0" text-anchor="end" font-size="12.5" fill="#334155">天猫</text><rect x="92" y="52" width="556" height="30" rx="4" fill="#f1f5fa"/><rect x="92" y="52" width="457.9" height="30" rx="4" fill="#3d8bfd"><title>天猫 ¥19.0万</title></rect><text x="660" y="71.0" font-size="12" fill="#41536b" font-weight="600">¥19.0万　24.0%</text><text x="80" y="115.0" text-anchor="end" font-size="12.5" fill="#334155">京东</text><rect x="92" y="96" width="556" height="30" rx="4" fill="#f1f5fa"/><rect x="92" y="96" width="338.5" height="30" rx="4" fill="#3d8bfd"><title>京东 ¥14.0万</title></rect><text x="660" y="115.0" font-size="12" fill="#41536b" font-weight="600">¥14.0万　17.8%</text><text x="80" y="159.0" text-anchor="end" font-size="12.5" fill="#334155">官网</text><rect x="92" y="140" width="556" height="30" rx="4" fill="#f1f5fa"/><rect x="92" y="140" width="294.7" height="30" rx="4" fill="#3d8bfd"><title>官网 ¥12.2万</title></rect><text x="660" y="159.0" font-size="12" fill="#41536b" font-weight="600">¥12.2万　15.5%</text><text x="80" y="203.0" text-anchor="end" font-size="12.5" fill="#334155">小程序</text><rect x="92" y="184" width="556" height="30" rx="4" fill="#f1f5fa"/><rect x="92" y="184" width="259.5" height="30" rx="4" fill="#3d8bfd"><title>小程序 ¥10.8万</title></rect><text x="660" y="203.0" font-size="12" fill="#41536b" font-weight="600">¥10.8万　13.6%</text></svg>
+      <table style="margin-top:14px">
+        <thead><tr><th>渠道</th><th>客单价</th><th>订单</th><th>同比</th></tr></thead>
+        <tbody><tr><td>线下门店</td><td class="num">¥503</td><td class="num">459</td><td><span class="up">▲ 22.5%</span></td></tr><tr><td>天猫</td><td class="num">¥569</td><td class="num">334</td><td><span class="up">▲ 27.8%</span></td></tr><tr><td>京东</td><td class="num">¥470</td><td class="num">299</td><td><span class="up">▲ 16.0%</span></td></tr><tr><td>官网</td><td class="num">¥566</td><td class="num">216</td><td><span class="up">▲ 39.0%</span></td></tr><tr><td>小程序</td><td class="num">¥661</td><td class="num">163</td><td><span class="up">▲ 51.5%</span></td></tr></tbody>
+      </table>
+    </section>
+  </div>
+
+  <section>
+    <h2><span class="idx">8</span>订单转化漏斗 <small>2026 年累计</small></h2>
+    <p class="sub">从下单到支付的流失环节。取消订单属于可控流失，待支付未转化属于可挽回流失。</p>
+    <div class="chartbox"><svg viewBox="0 0 800 230" width="100%" role="img" aria-label="订单转化漏斗" style="display:block;font-family:system-ui,-apple-system,'Segoe UI','Microsoft YaHei',sans-serif"><path d="M76.0,22 L524.0,22 L509.5,64 L90.5,64 Z" fill="#1d4e89" opacity="0.92"><title>提交订单 1,791</title></path><text x="300" y="48.0" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">提交订单</text><text x="526.0" y="48.0" font-size="13" fill="#334155" font-weight="600">1,791</text><text x="780" y="48.0" text-anchor="end" font-size="11.5" fill="#94a3b8">累计 100.0%</text><path d="M90.5,71 L509.5,71 L488.3,113 L111.7,113 Z" fill="#3d8bfd" opacity="0.80"><title>有效订单（未取消） 1,661</title></path><text x="300" y="97.0" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">有效订单（未取消）</text><text x="526.0" y="97.0" font-size="13" fill="#334155" font-weight="600">1,661</text><text x="780" y="97.0" text-anchor="end" font-size="11.5" fill="#94a3b8">累计 92.7%　单步 92.7%</text><path d="M111.7,120 L488.3,120 L468.6,162 L131.4,162 Z" fill="#5fa8d3" opacity="0.68"><title>完成支付 1,471</title></path><text x="300" y="146.0" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">完成支付</text><text x="526.0" y="146.0" font-size="13" fill="#334155" font-weight="600">1,471</text><text x="780" y="146.0" text-anchor="end" font-size="11.5" fill="#94a3b8">累计 82.1%　单步 88.6%</text></svg></div>
+  </section>
+
+  
+  <section>
+    <h2><span class="idx">9</span>月度目标达成 <small>7/9 个月达标（目标 = 去年同月 × 1.15）</small></h2>
+    <p class="sub">红色为超额达成，琥珀色为接近达标（≥90%），橙色为明显缺口。</p>
+    <div class="prog"><div class="row"><div class="muted num">2026-01</div><div class="track"><div class="fill" style="width:95.1%;background:#d64545"></div></div><div class="mono num">112% <span class="muted" style="font-weight:400">/ ¥8万</span></div></div><div class="row"><div class="muted num">2026-02</div><div class="track"><div class="fill" style="width:100.0%;background:#d64545"></div></div><div class="mono num">118% <span class="muted" style="font-weight:400">/ ¥6万</span></div></div><div class="row"><div class="muted num">2026-03</div><div class="track"><div class="fill" style="width:65.6%;background:#c2410c"></div></div><div class="mono num">77% <span class="muted" style="font-weight:400">/ ¥7万</span></div></div><div class="row"><div class="muted num">2026-04</div><div class="track"><div class="fill" style="width:91.1%;background:#d64545"></div></div><div class="mono num">107% <span class="muted" style="font-weight:400">/ ¥8万</span></div></div><div class="row"><div class="muted num">2026-05</div><div class="track"><div class="fill" style="width:92.5%;background:#d64545"></div></div><div class="mono num">109% <span class="muted" style="font-weight:400">/ ¥8万</span></div></div><div class="row"><div class="muted num">2026-06</div><div class="track"><div class="fill" style="width:82.7%;background:#e0a458"></div></div><div class="mono num">98% <span class="muted" style="font-weight:400">/ ¥10万</span></div></div><div class="row"><div class="muted num">2026-07</div><div class="track"><div class="fill" style="width:100.0%;background:#d64545"></div></div><div class="mono num">126% <span class="muted" style="font-weight:400">/ ¥8万</span></div></div><div class="row"><div class="muted num">2026-08</div><div class="track"><div class="fill" style="width:100.0%;background:#d64545"></div></div><div class="mono num">135% <span class="muted" style="font-weight:400">/ ¥8万</span></div></div><div class="row"><div class="muted num">2026-09</div><div class="track"><div class="fill" style="width:100.0%;background:#d64545"></div></div><div class="mono num">124% <span class="muted" style="font-weight:400">/ ¥8万</span></div></div></div>
+  </section>
+
+  <section>
+    <h2><span class="idx">10</span>下一步建议</h2>
+    <p class="sub">基于上面的结论，给出可执行的动作方向，不涉及具体商务判断。</p>
+    <div class="notes"><ol><li>对同比下滑的品类做单品级动销诊断，区分「价格问题」「缺货问题」「铺货问题」，不要用整体打折掩盖结构性下滑。</li><li>把高客单价渠道的成交路径拆出来（选品组合、连带率、优惠门槛），复制到占比最高但客单价低的渠道。</li><li>未达成目标的月份需补齐归因：是流量缺口还是转化缺口，两者对应的动作完全不同。</li><li>把复查口径固定下来（GMV 是否含退款、订单数是否含取消），下期报表才能横向对比。</li></ol></div>
+  </section>
+
+  <section>
+    <h2><span class="idx">11</span>数据口径与交付说明</h2>
+    <div class="notes">
+      <b>指标定义</b>
+      <ol>
+        <li>GMV：status = 已支付 的订单金额合计，不含取消与退款订单。</li>
+        <li>订单数：按 order_id 去重计数。</li>
+        <li>客单价：GMV ÷ 订单数，保留整数。</li>
+        <li>同比：2026 年累计 vs 2025 年同期；环比：2026-09 vs 上月。</li>
+        <li>目标：去年同月 GMV × 1.15，仅用于衡量节奏，不代表客户实际预算。</li>
+      </ol>
+      <b style="display:block;margin-top:10px">技术说明</b>
+      <div>本报表由 Python 标准库直接生成静态 HTML，图表为内联 SVG，<b>不依赖任何 JS 图表库与网络资源</b>；
+      拷贝单个 HTML 文件即可在任何电脑打开、可直接打印为 PDF。原始明细全程留在本机，未上传。</div>
+    </div>
+  </section>
+
+  <footer>
+    报告生成时间 2026-10-20 21:21:38 ｜ 明细 3,975 条 ｜ 分析区间 2025-01 ~ 2026-09<br>
+    如需调整口径、增加维度或改为周期性自动出报表，可在现有脚本上扩展，无需重做。
+  </footer>
+</div>
+</body>
+</html>
