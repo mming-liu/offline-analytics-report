@@ -204,7 +204,7 @@ offline-analytics-report/
 | [data-clean-pipeline](https://github.com/mming-liu/data-clean-pipeline) | 数据层：脏表 → 标准数据集，逐格留痕可追溯 |
 | **offline-analytics-report**（本仓库） | 报表层：标准数据集 → 经营复盘报表与结论 |
 
-**汇总演示页（一页看全三个项目）**：https://mming-liu.github.io/bid-demo-overview/ —— 三张实拍截图、硬指标、服务编号对照与现场验证命令。
+**汇总演示页（一页看全三个项目）**：https://mming-liu.github.io/demo-overview/ —— 三张实拍截图、硬指标、服务编号对照与现场验证命令。
 
 ---
 

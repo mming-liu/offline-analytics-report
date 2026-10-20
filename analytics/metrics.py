@@ -326,16 +326,25 @@ def build_insights(m: dict) -> list[dict]:
 
     if m["channels"]:
         high_aov = max(m["channels"], key=lambda c: c["aov"])
-        biggest = m["channels"][0]
+        # 对比基准取「客单价最高渠道以外」GMV 最大的渠道，避免自己和比自己得出 1.0 倍
+        base = max(
+            (c for c in m["channels"] if c["name"] != high_aov["name"]),
+            key=lambda c: c["gmv"],
+            default=None,
+        )
+        if base is not None:
+            detail = (
+                f"是 GMV 最大的其余渠道 {base['name']}（¥{base['aov']:,.0f}）的 "
+                f"{high_aov['aov'] / base['aov']:.1f} 倍。"
+                f"但 {high_aov['name']} 仅占 GMV {high_aov['share']:.1f}%，存在提升空间。"
+            )
+        else:
+            detail = f"客单价 ¥{high_aov['aov']:,.0f}，GMV 占比 {high_aov['share']:.1f}%。"
         out.append(
             {
                 "level": "good",
                 "title": f"{high_aov['name']} 客单价最高（¥{high_aov['aov']:,.0f}）",
-                "detail": (
-                    f"是 {biggest['name']}（¥{biggest['aov']:,.0f}）的 "
-                    f"{high_aov['aov'] / biggest['aov']:.1f} 倍。"
-                    f"但 {high_aov['name']} 仅占 GMV {high_aov['share']:.1f}%，存在提升空间。"
-                ),
+                "detail": detail,
             }
         )
 
